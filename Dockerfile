@@ -4,7 +4,7 @@ MAINTAINER Markos Calderon <markos@criptext.com>
 
 RUN apt-get update
 
-RUN apt-get install --no-install-recommends -y wget build-essential nano curl
+RUN apt-get install --no-install-recommends -y wget nano curl
 
 # Install libreoffice
 
@@ -25,3 +25,4 @@ RUN apt-get install --no-install-recommends -y imagemagick
 RUN curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
 RUN apt-get install --no-install-recommends -y nodejs
 
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
